@@ -21,7 +21,7 @@
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 import server from './app';
 
-const PORT = 4000;
-server.listen(PORT, () => {
+const PORT = process.env.PORT;
+server.listen(PORT || 4000, () => {
     console.log(`%s listening at ${PORT}`);
-})
+});
